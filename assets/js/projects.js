@@ -25,7 +25,8 @@ function renderProjects(projects){
     card.rel = p.url ? 'noopener' : '';
     card.setAttribute('aria-label', p.title || 'project');
 
-    const src = p.image && p.image.trim() ? p.image : placeholderIllustration(idx);
+    const base = (p.image && p.image.trim() ? p.image : placeholderIllustration(idx));
+    const src = base.startsWith('data:') ? base : `${base}?v=4`;
     const rawTitle = p.title || '';
     // Prefer line break after a year token like 2024/2025; otherwise break before "From"
     let prettyTitle = rawTitle.replace(/(20\d{2})\s+/, '$1<br/>');
