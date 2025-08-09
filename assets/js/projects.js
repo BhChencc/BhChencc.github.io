@@ -26,7 +26,7 @@ function renderProjects(projects){
     card.setAttribute('aria-label', p.title || 'project');
 
     const base = (p.image && p.image.trim() ? p.image : placeholderIllustration(idx));
-    const src = base.startsWith('data:') ? base : `${base}?v=4`;
+    const src = base.startsWith('data:') ? base : `${base}?v=5`;
     const rawTitle = p.title || '';
     // Prefer line break after a year token like 2024/2025; otherwise break before "From"
     let prettyTitle = rawTitle.replace(/(20\d{2})\s+/, '$1<br/>');
@@ -40,6 +40,13 @@ function renderProjects(projects){
         <div class="overlay-title">${prettyTitle}</div>
       </div>
     `;
+    const imgEl = card.querySelector('img');
+    if(imgEl){
+      imgEl.addEventListener('error', () => {
+        const fallback = placeholderIllustration(idx);
+        imgEl.src = fallback;
+      }, { once: true });
+    }
     grid.appendChild(card);
   });
 }
