@@ -13,36 +13,51 @@ function placeholderIllustration(index){
   return `data:image/svg+xml;utf8,${encodeURIComponent(svg)}`;
 }
 
+function renderProjects(projects){
+  const grid = document.getElementById('projects-grid');
+  if(!grid) return;
+  grid.innerHTML = '';
+  projects.forEach((p, idx) => {
+    const card = document.createElement('a');
+    card.className = 'card card-image-only';
+    card.href = p.url || '#';
+    card.target = p.url ? '_blank' : '';
+    card.rel = p.url ? 'noopener' : '';
+    card.setAttribute('aria-label', p.title || 'project');
+
+    const src = p.image && p.image.trim() ? p.image : placeholderIllustration(idx);
+    const rawTitle = p.title || '';
+    // Prefer line break after a year token like 2024/2025; otherwise break before "From"
+    let prettyTitle = rawTitle.replace(/(20\d{2})\s+/, '$1<br/>');
+    if(!prettyTitle.includes('<br/>')){
+      prettyTitle = prettyTitle.replace(/\s+(from)\s+/i, '<br/>$1 ');
+    }
+
+    card.innerHTML = `
+      <img src="${src}" alt="${p.title || ''}">
+      <div class="card-overlay">
+        <div class="overlay-title">${prettyTitle}</div>
+      </div>
+    `;
+    grid.appendChild(card);
+  });
+}
+
+let allProjects = [];
+
 async function fetchProjects(){
   const grid = document.getElementById('projects-grid');
   if(!grid) return;
   try{
     const res = await fetch('data/projects.json');
     const items = await res.json();
-    const projects = Array.isArray(items) ? items : items.projects;
-    grid.innerHTML = '';
-    projects.forEach((p, idx) => {
-      const card = document.createElement('a');
-      card.className = 'card card-image-only';
-      card.href = p.url || '#';
-      card.target = p.url ? '_blank' : '';
-      card.rel = p.url ? 'noopener' : '';
-      card.setAttribute('aria-label', p.title || 'project');
-
-      const src = p.image && p.image.trim() ? p.image : placeholderIllustration(idx);
-
-      card.innerHTML = `
-        <img src="${src}" alt="${p.title || ''}">
-        <div class="card-overlay">
-          <div class="overlay-title">${p.title || ''}</div>
-        </div>
-      `;
-      grid.appendChild(card);
-    });
+    allProjects = Array.isArray(items) ? items : items.projects;
+    renderProjects(allProjects);
   }catch(err){
     grid.textContent = 'Failed to load projects.';
     // eslint-disable-next-line no-console
     console.error(err);
   }
 }
+
 fetchProjects();
