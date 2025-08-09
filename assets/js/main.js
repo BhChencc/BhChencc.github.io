@@ -1,4 +1,8 @@
 (function(){
+  // Ensure tab title is updated everywhere if an old cached title remains
+  if(document && typeof document.title === 'string' && document.title.includes('Personal Website')){
+    document.title = 'Baihui Chen';
+  }
   const yearEl = document.getElementById('year');
   if(yearEl){ yearEl.textContent = new Date().getFullYear(); }
 
