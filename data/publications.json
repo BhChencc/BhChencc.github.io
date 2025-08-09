@@ -1,0 +1,56 @@
+[
+  {
+    "year": 2024,
+    "title": "Patbot: Designing a Social Robot to Reduce Anxiety in Waiting Environments",
+    "authors": "Zihei Kong, Maria Luce Lupetti, Baihui Chen, Xueliang Li",
+    "venue": "IEEE International Conference on Robot and Human Interactive Communication (RO-MAN 2024)",
+    "links": [
+      {"name": "[DOI]", "url": "https://ieeexplore.ieee.org/abstract/document/10731221"}
+    ]
+  },
+  {
+    "year": 2024,
+    "title": "Understanding Socio-technical Opportunities for Enhancing Communication Between Older Adults and their Remote Family",
+    "authors": "Baihui Chen and Xueliang Li",
+    "venue": "In Proceedings of CHI 2024.",
+    "links": [
+      {"name": "[DOI]", "url": "https://doi.org/10.1145/3613904.3642318"}
+    ]
+  },
+  {
+    "year": 2023,
+    "title": "A scientometric analysis of research on people with visual impairments in the field of HCI design: mapping the intellectual structure and evolution",
+    "authors": "Lusha Huang and Baihui Chen",
+    "venue": "Universal Access in the Information Society (SCI)",
+    "links": [
+      {"name": "[DOI]", "url": "https://link.springer.com/article/10.1007/s10209-023-01067-x"}
+    ]
+  },
+  {
+    "year": 2023,
+    "title": "Exploring multimodal technologies to engage elderly people in remote communication with their family",
+    "authors": "Baihui Chen and Xueliang Li",
+    "venue": "The 10th Congress of the International Association of Societies of Design Research (IASDR 2023)",
+    "links": [
+      {"name": "[DOI]", "url": "https://doi.org/10.21606/iasdr.2023.441"}
+    ]
+  },
+  {
+    "year": 2022,
+    "title": "A Systematic Review of Multimodal Interaction in Artificial Intelligent System Supporting Children to Learn Music",
+    "authors": "Baihui Chen and Lusha Huang",
+    "venue": "The 24th International Conference on Human-Computer Interaction (HCII 2022)",
+    "links": [
+      {"name": "[DOI]", "url": "https://link.springer.com/chapter/10.1007/978-3-031-05311-5_38"}
+    ]
+  },
+  {
+    "year": 2021,
+    "title": "Research on the Experience of Interactive Art From the Perspective of Reception Aesthetics",
+    "authors": "Baihui Chen",
+    "venue": "The 6th International Conference on Arts, Design and Contemporary Education (ICADCE 2020)",
+    "links": [
+      {"name": "[DOI]", "url": "https://doi.org/10.2991/assehr.k.210806.009"}
+    ]
+  }
+]
