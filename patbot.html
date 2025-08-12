@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>PATBOT - Social Robot for Calming Interactions · Baihui Chen</title>
+  <link rel="icon" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/styles.css?v=8" />
+  <style>
+    .project-content {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2rem;
+      background: var(--bg);
+      min-height: 100vh;
+    }
+    
+    .section {
+      margin: 2rem 0;
+    }
+    
+    .section h2 {
+      font-size: 1.3rem;
+      color: #2d3748;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+    }
+    
+    .section h3 {
+      font-size: 1.1rem;
+      color: #4a5568;
+      margin: 1.5rem 0 0.8rem 0;
+    }
+    
+    .video-container {
+      position: relative;
+      width: 100%;
+      max-width: 1920px;
+      margin: 2rem auto;
+      background: none;
+      border-radius: 0;
+      overflow: hidden;
+      box-shadow: none;
+    }
+    
+    .video-player {
+      width: 100%;
+      aspect-ratio: 16/9;
+      background: #000;
+    }
+    
+    .abstract {
+      background: none;
+      padding: 0;
+      border-radius: 0;
+      margin: 1.5rem 0;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      text-align: justify;
+      text-justify: inter-word;
+      margin-left: 0;
+      margin-right: 0;
+    }
+    
+    .keywords {
+      display: block;
+      margin: 1rem 0;
+    }
+    
+    .keyword {
+      background: none;
+      color: #4a5568;
+      padding: 0;
+      border: none;
+      border-radius: 0;
+      font-size: 0.9rem;
+      font-weight: normal;
+    }
+    
+    .back-link {
+      display: inline-block;
+      margin: 0.5rem 0;
+      padding: 0.3rem 0;
+      color: #6c757d;
+      text-decoration: none;
+      font-size: 0.9rem;
+      transition: color 0.3s ease;
+    }
+    
+    .back-link:hover {
+      color: #495057;
+    }
+    
+    .publication-info {
+      background: #edf2f7;
+      padding: 1.2rem;
+      border-radius: 8px;
+      margin: 1rem 0;
+      font-size: 0.95rem;
+    }
+    
+    .publication-info a {
+      color: #ed8936;
+      text-decoration: none;
+    }
+    
+    .publication-info a:hover {
+      text-decoration: underline;
+    }
+    
+    .project-image {
+      width: 100%;
+      max-width: 600px;
+      margin: 2rem auto;
+      display: block;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+    
+    .authors, .period {
+      font-size: 0.9rem;
+      color: #6c757d;
+      margin-bottom: 0.8rem;
+    }
+    
+    .period {
+      margin-bottom: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="container nav">
+      <a class="brand" href="index.html">
+        <span class="brand-title">BAIHUI CHEN</span>
+        <span class="brand-subtitle">Researcher | Developer | Designer</span>
+      </a>
+      <nav id="site-nav" class="site-nav">
+        <a href="index.html">Home</a>
+        <a href="publications.html">Publications</a>
+        <a href="projects.html">Projects</a>
+      </nav>
+      <button class="nav-toggle" aria-controls="site-nav" aria-expanded="false">☰</button>
+    </div>
+  </header>
+
+  <main>
+    <div class="project-content">
+      <a href="projects.html" class="back-link">← BACK TO PROJECTS</a>
+
+      <div class="section">
+        <div class="video-container">
+          <video class="video-player" controls>
+            <source src="assets/video/ROMAN24.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2>Patbot: Designing a Social Robot to Reduce Anxiety in Waiting Environments</h2>
+        <div class="authors">
+          Zhilei Kong, Maria Luce Lupetti, <strong>Baihui Chen</strong> and Xueliang Li*
+        </div>
+        <div class="period">
+          <strong>Publication:</strong> In conference of 2024 33rd IEEE International Conference on Robot and Human Interactive Communication (ROMAN'24). DOI: <a href="https://doi.org/10.1109/RO-MAN60168.2024.10731221" target="_blank" rel="noopener">10.1109/RO-MAN60168.2024.10731221</a>
+        </div>
+        
+        <div class="abstract">
+          <strong>Abstract:</strong> This paper presents the design of a novel social robot, namely Patbot, to engage people in playful interactions to help reduce their anxiety in waiting environments. We introduce the rationale and design decisions made during the development of the robot. We evaluated the robot's usability through an experiment within a simulated waiting environment, followed by interviews with the participants. The study indicated a positive effect of interacting with Patbot regarding STAI-6 anxiety measures. Other quantitative and qualitative measures, including Godspeed questionnaires, observation, and post-interviews, revealed positive impressions made by Patbot regarding its likability and animacy and that it could engage individuals in intuitive and playful activities. Our findings suggest the promise of designing social robots for entertainment and relaxation to enhance people's emotional experiences in waiting environments.
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <span>© 2025 Copyright by Baihui Chen</span>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js?v=7"></script>
+</body>
+</html>

@@ -1,6 +1,7 @@
 :root{--bg:#f5f7fa;--panel:rgba(0,0,0,0.03);--text:#1a1a1a;--muted:#475467;--brand:#2d7cff;--brand-strong:#0d62ff;--brand-green:#2fb37a;--card:#ffffff;--border:#e5e7eb}
 *{box-sizing:border-box}
 html,body{margin:0;padding:0;height:100%}
+html{scroll-behavior:smooth}
 body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,"Apple Color Emoji","Segoe UI Emoji";background:linear-gradient(180deg,#f7f9fc, #f1f4f9 50%, #f7f9fc 100%);color:var(--text);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 img{max-width:100%;display:block}
 
@@ -8,8 +9,12 @@ img{max-width:100%;display:block}
 .container.narrow{width:min(850px,90vw)}
 
 /* Header */
-.site-header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.85);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid var(--border)}
-.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0}
+.site-header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.85);backdrop-filter:saturate(140%) blur(10px);border-bottom:1px solid var(--border);width:100%;left:0;right:0;box-sizing:border-box}
+.nav{display:flex;align-items:center;justify-content:space-between;padding:14px 0;width:100%;max-width:1100px;margin:0 auto;box-sizing:border-box}
+
+/* Force consistent header positioning across all pages */
+body{overflow-x:hidden}
+.site-header{min-width:100vw;transform:translateZ(0)}
 .brand{color:var(--text);text-decoration:none;display:flex;flex-direction:column}
 .brand-title{font-weight:700;letter-spacing:.04em;margin-bottom:4px}
 .brand-subtitle{font-size:.82rem;color:var(--muted)}
@@ -63,6 +68,15 @@ pointer-events:none;z-index:0}
 .page h1{margin-top:10px}
 .publications{padding-top:18px;padding-bottom:40px}
 
+/* Ensure consistent layout across all pages */
+.page, .publications, .centered-main {
+  width: 100%;
+  max-width: none;
+  margin: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
 /* Publications */
 .pub-year{margin:22px 0 6px;font-weight:700;color:#0f172a;font-size:.95rem}
 .pub-item{padding:14px 0;border-bottom:1px dashed var(--border)}
@@ -90,6 +104,7 @@ pointer-events:none;z-index:0}
 /* Make image noticeably lighter so blue text is readable */
 .card:hover .card-overlay{opacity:1;background:rgba(255,255,255,.78)}
 .card:hover img{filter:grayscale(0.15) brightness(1.05) contrast(0.9)}
+
 /* Projects toolbar (currently not used) */
 
 /* Footer */

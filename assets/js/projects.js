@@ -26,7 +26,7 @@ function renderProjects(projects){
     card.setAttribute('aria-label', p.title || 'project');
 
     const base = (p.image && p.image.trim() ? p.image : placeholderIllustration(idx));
-    const src = base.startsWith('data:') ? base : `${base}?v=6`;
+    const src = base.startsWith('data:') ? base : `${base}?v=8`;
     const rawTitle = p.title || '';
     // Prefer line break after a year token like 2024/2025; otherwise break before "From"
     let prettyTitle = rawTitle.replace(/(20\d{2})\s+/, '$1<br/>');
@@ -57,7 +57,7 @@ async function fetchProjects(){
   const grid = document.getElementById('projects-grid');
   if(!grid) return;
   try{
-    const res = await fetch('projects.json?v=6');
+    const res = await fetch('projects.json?v=8');
     const items = await res.json();
     allProjects = Array.isArray(items) ? items : items.projects;
     renderProjects(allProjects);
