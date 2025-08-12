@@ -57,7 +57,7 @@ async function fetchProjects(){
   const grid = document.getElementById('projects-grid');
   if(!grid) return;
   try{
-    const res = await fetch('data/projects.json?v=5');
+    const res = await fetch('projects.json?v=6');
     const items = await res.json();
     allProjects = Array.isArray(items) ? items : items.projects;
     renderProjects(allProjects);
