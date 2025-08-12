@@ -1,0 +1,50 @@
+[
+  {
+    "title": "UIST Adjunct 2025 From Gentle Touch to Sharp Scratch",
+    "period": "2025.05 – 2025.07",
+    "image": "",
+    "url": "#",
+    "summary": "Investigating multimodal techniques to improve remote social connection for older adults.",
+    "with": ""
+  },
+  {
+    "title": "CHI 2024 Understand the Needs of Older Adults in Remote Communication",
+    "period": "2023.01 – 2024.09",
+    "image": "assets/img/P2.png",
+    "url": "#",
+    "summary": "A soft social robot that offers calming interactions for anxious users in waiting rooms.",
+    "with": ""
+  },
+  {
+    "title": "PATBOT",
+    "period": "2023.03 – 2024.09",
+    "image": "assets/img/P3.png",
+    "url": "#",
+    "summary": "Creative learning tools that blend embodiment and multimodality to aid musical cognition in children.",
+    "with": ""
+  },
+  {
+    "title": "Kinetic Shadow",
+    "period": "2020",
+    "image": "",
+    "url": "#",
+    "summary": "Play with the light and shadow.",
+    "with": ""
+  },
+  {
+    "title": "Telepresence Cat Companion",
+    "period": "2023",
+    "image": "",
+    "url": "#",
+    "summary": "Physical Telepresence class (sample demo).",
+    "with": ""
+  },
+  {
+    "title": "Light the Candle",
+    "period": "2019",
+    "image": "",
+    "url": "#",
+    "summary": "Creative game controller.",
+    "with": ""
+  }
+]
