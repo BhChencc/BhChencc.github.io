@@ -21,8 +21,8 @@ function renderProjects(projects){
     const card = document.createElement('a');
     card.className = 'card card-image-only';
     card.href = p.url || '#';
-    card.target = p.url ? '_blank' : '';
-    card.rel = p.url ? 'noopener' : '';
+    // card.target = p.url ? '_blank' : '';
+    // card.rel = p.url ? 'noopener' : '';
     card.setAttribute('aria-label', p.title || 'project');
 
     const base = (p.image && p.image.trim() ? p.image : placeholderIllustration(idx));
