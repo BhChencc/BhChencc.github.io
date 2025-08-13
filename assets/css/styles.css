@@ -98,6 +98,9 @@ pointer-events:none;z-index:0}
 /* Image-only variant per request */
 .card.card-image-only{border:none;border-radius:0;background:transparent}
 .card.card-image-only img{aspect-ratio:1/1;width:100%;object-fit:contain;background:var(--bg)}
+
+/* Special styling for ZOMA project to make image smaller */
+.card.card-image-only.zoma-project img{aspect-ratio:1/1;width:80%;max-width:300px;height:auto;margin:0 auto;object-fit:contain}
 .card-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .18s ease, background .18s ease;padding:0 28px;background:rgba(255,255,255,0);pointer-events:none}
 .overlay-title{color:var(--brand);font-weight:700;font-size:1.05rem;line-height:1.28;text-align:center;word-break:keep-all}
 .card:hover{transform:translateY(-2px);box-shadow:0 6px 18px rgba(16,24,40,.10)}

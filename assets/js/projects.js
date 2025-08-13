@@ -19,7 +19,14 @@ function renderProjects(projects){
   grid.innerHTML = '';
   projects.forEach((p, idx) => {
     const card = document.createElement('a');
-    card.className = 'card card-image-only';
+    let cardClass = 'card card-image-only';
+    
+    // Add special class for ZOMA project
+    if (p.title && p.title.includes('ZOMA')) {
+      cardClass += ' zoma-project';
+    }
+    
+    card.className = cardClass;
     card.href = p.url || '#';
     // card.target = p.url ? '_blank' : '';
     // card.rel = p.url ? 'noopener' : '';
