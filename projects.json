@@ -32,19 +32,19 @@
     "with": ""
   },
   {
-    "title": "ZOMA",
-    "period": "2023",
-    "image": "assets/img/P5.png",
-    "url": "#",
-    "summary": "Physical Telepresence class (sample demo).",
-    "with": ""
-  },
-  {
     "title": "FRUITY STAR",
     "period": "2019",
     "image": "assets/img/P6.png",
     "url": "fruity-star.html",
     "summary": "Creative game controller.",
+    "with": ""
+  },
+  {
+    "title": "ZOMA",
+    "period": "2023",
+    "image": "assets/img/P5.png",
+    "url": "#",
+    "summary": "Physical Telepresence class (sample demo).",
     "with": ""
   }
 ]
