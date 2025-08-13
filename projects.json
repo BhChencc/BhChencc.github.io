@@ -24,6 +24,14 @@
     "with": ""
   },
   {
+    "title": "ZOMA",
+    "period": "2023",
+    "image": "assets/img/P5.png",
+    "url": "#",
+    "summary": "Physical Telepresence class (sample demo).",
+    "with": ""
+  },
+  {
     "title": "Preschool Children Embodied Music Adventure", 
     "period": "2021",
     "image": "assets/img/P4.png",
@@ -37,14 +45,6 @@
     "image": "assets/img/P6.png",
     "url": "fruity-star.html",
     "summary": "Creative game controller.",
-    "with": ""
-  },
-  {
-    "title": "ZOMA",
-    "period": "2023",
-    "image": "assets/img/P5.png",
-    "url": "#",
-    "summary": "Physical Telepresence class (sample demo).",
     "with": ""
   }
 ]
