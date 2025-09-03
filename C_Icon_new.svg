@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_图层_1" data-name="图层 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1238.03 1159.17">
+  <defs>
+    <style>
+      .cls-1 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-1, .cls-2 {
+        fill: #fff;
+        stroke: #251e1c;
+        stroke-width: 45px;
+      }
+
+      .cls-2 {
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+    </style>
+  </defs>
+  <rect class="cls-1" x="88.21" y="82.29" width="1073.42" height="1017.37" rx="27.37" ry="27.37"/>
+  <line class="cls-2" x1="719.45" y1="393.01" x2="841.64" y2="826.79"/>
+  <line class="cls-2" x1="794.72" y1="609.9" x2="1146.37" y2="563.06"/>
+</svg>
