@@ -11,7 +11,7 @@
     "title": "CHI 2024 Understand the Needs of Older Adults in Remote Communication",
     "period": "2023.01 – 2024.09",
     "image": "assets/img/P2.png",
-    "url": "#",
+    "url": "chi-2024.html",
     "summary": "Investigating multimodal techniques to improve remote social connection for older adults.",
     "with": ""
   },
@@ -19,7 +19,7 @@
     "title": "PATBOT",
     "period": "2023.03 – 2024.09",
     "image": "assets/img/P3.png",
-    "url": "#",
+    "url": "patbot.html",
     "summary": "A social robot that offers calming interactions for anxious users in waiting rooms.",
     "with": ""
   },
@@ -32,10 +32,10 @@
     "with": ""
   },
   {
-    "title": "MELOMBODY", 
+    "title": "Preschool Children Embodied Music Adventure", 
     "period": "2021",
     "image": "assets/img/P4.png",
-    "url": "#",
+    "url": "music-adventure.html",
     "summary": "Creative learning tools that blend embodiment and multimodality to aid musical cognition in children.",
     "with": ""
   },
@@ -43,7 +43,7 @@
     "title": "FRUITY STAR",
     "period": "2019",
     "image": "assets/img/P6.png",
-    "url": "#",
+    "url": "fruity-star.html",
     "summary": "Creative game controller.",
     "with": ""
   }
