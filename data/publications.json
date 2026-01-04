@@ -2,7 +2,7 @@
   {
     "year": 2025,
     "title": "From Gentle Touch to Sharp Scratch: A Shape-Changing Haptic Interface Driven by Shape-Memory Alloy for Affective Touch",
-    "authors": "Baihui Chen, Ruyang Yu, Yujie Li, Rui Qi, Qiang Liu and Xueliang Li*",
+    "authors": "Baihui Chen, Ruyang Yu, Yujie Li, Rui Qi, Qiang Liu and Xueliang Li",
     "venue": "In Proceedings of UIST EA 2025.",
     "links": [
       {"name": "[DOI]", "url": "https://doi.org/10.1145/3746058.3758431"}
