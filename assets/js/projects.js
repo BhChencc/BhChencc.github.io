@@ -3,7 +3,7 @@ function placeholderIllustration(index){
   const seed = illustrationSeeds[index % illustrationSeeds.length];
   // Lightweight SVG illustrations with background matching the page color
   const svg = `<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'>
-    <rect width='200' height='200' fill='#f5f7fa'/>
+    <rect width='200' height='200' fill='#ffffff'/>
     <g stroke='#c1c9d6' stroke-width='2' fill='none'>
       <circle cx='60' cy='60' r='24'/>
       <rect x='110' y='40' width='60' height='30' rx='6'/>
