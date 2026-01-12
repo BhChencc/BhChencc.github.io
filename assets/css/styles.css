@@ -101,7 +101,7 @@ body{overflow-x:hidden}
 .card.card-image-only.zoma-project img{aspect-ratio:1/1;width:60%;max-width:220px;height:auto;object-fit:contain}
 .card-overlay{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity .18s ease, background .18s ease;padding:0 28px;background:rgba(255,255,255,0);pointer-events:none}
 .overlay-title{color:var(--text);font-weight:700;font-size:1.05rem;line-height:1.28;text-align:center;word-break:keep-all}
-.card:hover{transform:translateY(-2px);box-shadow:0 4px 12px rgba(16,24,40,.08)}
+.card:hover{transform:translateY(-2px);box-shadow:0 3px 8px rgba(16,24,40,.05)}
 /* Make image noticeably lighter so blue text is readable */
 .card:hover .card-overlay{opacity:1;background:rgba(255,255,255,.78)}
 .card:hover img{filter:grayscale(0.15) brightness(1.05) contrast(0.9)}
