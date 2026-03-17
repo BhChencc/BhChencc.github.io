@@ -35,10 +35,13 @@ function renderProjects(projects){
     const base = (p.image && p.image.trim() ? p.image : placeholderIllustration(idx));
     const src = base.startsWith('data:') ? base : `${base}?v=12`;
     const rawTitle = p.title || '';
-    // Prefer line break after a year token like 2024/2025; otherwise break before "From"
+    // Prefer line break after a year token like 2024/2025; otherwise break before "From"; IEEE RO-MAN 24 / PATBOT
     let prettyTitle = rawTitle.replace(/(20\d{2})\s+/, '$1<br/>');
     if(!prettyTitle.includes('<br/>')){
       prettyTitle = prettyTitle.replace(/\s+(from)\s+/i, '<br/>$1 ');
+    }
+    if(!prettyTitle.includes('<br/>') && /IEEE RO-MAN 24\s+PATBOT/i.test(rawTitle)){
+      prettyTitle = rawTitle.replace(/\s+PATBOT\s*$/i, '<br/>PATBOT');
     }
 
     card.innerHTML = `
