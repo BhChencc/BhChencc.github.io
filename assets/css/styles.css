@@ -77,9 +77,10 @@ body{overflow-x:hidden}
 
 /* Publications */
 .pub-year{margin:22px 0 6px;font-weight:700;color:var(--text);font-size:.95rem}
-.pub-item{padding:14px 0;border-bottom:1px dashed var(--border)}
+.pub-year.pub-year-sep{margin-top:10px;padding-top:24px;border-top:1px dashed var(--border)}
+.pub-item{padding:14px 0}
 .pub-item:last-child{border-bottom:none}
-.pub-title{font-weight:700;color:var(--text)}
+.pub-title{font-weight:700;color:var(--text);line-height:1.45}
 .pub-meta{color:var(--text);font-size:.8rem;margin-top:6px;font-weight:400}
 .pub-links{display:flex;gap:10px;margin-top:8px;flex-wrap:wrap}
 .link{color:var(--brand);text-decoration:none}

@@ -14,9 +14,9 @@ async function fetchPublications(){
     }, {});
     const years = Object.keys(byYear).map(Number).sort((a,b)=>b-a);
     container.innerHTML = '';
-    for(const year of years){
+    years.forEach((year, idx) => {
       const y = document.createElement('h2');
-      y.className = 'pub-year';
+      y.className = 'pub-year' + (idx > 0 ? ' pub-year-sep' : '');
       y.textContent = `[ ${year} ]`;
       container.appendChild(y);
       for(const p of byYear[year]){
@@ -44,7 +44,7 @@ async function fetchPublications(){
         }
         container.appendChild(div);
       }
-    }
+    });
   }catch(err){
     container.textContent = 'Failed to load publications.';
     // eslint-disable-next-line no-console
