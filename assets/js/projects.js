@@ -18,8 +18,11 @@ function renderProjects(projects){
   if(!grid) return;
   grid.innerHTML = '';
   projects.forEach((p, idx) => {
-    const card = document.createElement('a');
+    const url = (p.url && String(p.url).trim()) ? String(p.url).trim() : '';
+    const isLink = !!url;
+    const card = isLink ? document.createElement('a') : document.createElement('div');
     let cardClass = 'card card-image-only';
+    if (!isLink) cardClass += ' card-no-link';
     
     // Add special class for ZOMA project
     if (p.title && p.title.includes('ZOMA')) {
@@ -27,21 +30,32 @@ function renderProjects(projects){
     }
     
     card.className = cardClass;
-    card.href = p.url || '#';
-    // card.target = p.url ? '_blank' : '';
-    // card.rel = p.url ? 'noopener' : '';
-    card.setAttribute('aria-label', p.title || 'project');
+    if (isLink) card.href = url;
+    const overlayTag = p.overlayTag && String(p.overlayTag).trim();
+    const shortTitle = p.shortTitle && String(p.shortTitle).trim();
+    card.setAttribute('aria-label', [shortTitle || p.title || 'project', overlayTag].filter(Boolean).join(' '));
 
     const base = (p.image && p.image.trim() ? p.image : placeholderIllustration(idx));
     const src = base.startsWith('data:') ? base : `${base}?v=12`;
     const rawTitle = p.title || '';
-    // Prefer line break after a year token like 2024/2025; otherwise break before "From"; IEEE RO-MAN 24 / PATBOT
-    let prettyTitle = rawTitle.replace(/(20\d{2})\s+/, '$1<br/>');
-    if(!prettyTitle.includes('<br/>')){
-      prettyTitle = prettyTitle.replace(/\s+(from)\s+/i, '<br/>$1 ');
-    }
-    if(!prettyTitle.includes('<br/>') && /IEEE RO-MAN 24\s+PATBOT/i.test(rawTitle)){
-      prettyTitle = rawTitle.replace(/\s+PATBOT\s*$/i, '<br/>PATBOT');
+    let prettyTitle;
+    if (overlayTag && shortTitle) {
+      prettyTitle = shortTitle.replace(/(20\d{2})\s+/, '$1<br/>');
+      if(!prettyTitle.includes('<br/>')){
+        prettyTitle = prettyTitle.replace(/\s+(from)\s+/i, '<br/>$1 ');
+      }
+      prettyTitle = prettyTitle + '<br/>' + overlayTag;
+    } else {
+      prettyTitle = rawTitle.replace(/(20\d{2})\s+/, '$1<br/>');
+      if(!prettyTitle.includes('<br/>')){
+        prettyTitle = prettyTitle.replace(/\s+(from)\s+/i, '<br/>$1 ');
+      }
+      if(!prettyTitle.includes('<br/>') && /IEEE RO-MAN 24\s+PATBOT/i.test(rawTitle)){
+        prettyTitle = rawTitle.replace(/\s+PATBOT\s*$/i, '<br/>PATBOT');
+      }
+      if (overlayTag) {
+        prettyTitle = prettyTitle + '<br/>' + overlayTag;
+      }
     }
 
     card.innerHTML = `
@@ -67,7 +81,7 @@ async function fetchProjects(){
   const grid = document.getElementById('projects-grid');
   if(!grid) return;
   try{
-    const res = await fetch('data/projects.json?v=19');
+    const res = await fetch('data/projects.json?v=26');
     const items = await res.json();
     allProjects = Array.isArray(items) ? items : items.projects;
     renderProjects(allProjects);

@@ -1,9 +1,21 @@
 [
   {
+    "title": "CSCW 2026",
+    "period": "",
+    "image": "assets/img/CSCW.png",
+    "url": "",
+    "shortTitle": "A Social-technical Perspective to Understand the Dynamics between University Students and Mental Health Professionals",
+    "overlayTag": "# CSCW 26",
+    "summary": "",
+    "with": ""
+  },
+  {
     "title": "UIST Adjunct 2025 From Gentle Touch to Sharp Scratch",
     "period": "2025.05 – 2025.07",
     "image": "assets/img/P1-0314.png",
     "url": "uist-adjunct-2025.html",
+    "shortTitle": "A Shape-Changing Haptic Interface Driven by Shape-Memory Alloy for Affective Touch",
+    "overlayTag": "# UIST Adjunct 25",
     "summary": "Investigating multimodal techniques to improve remote social connection for older adults.",
     "with": ""
   },
@@ -12,6 +24,8 @@
     "period": "2023.01 – 2024.09",
     "image": "assets/img/P2-0314.png",
     "url": "chi-2024.html",
+    "shortTitle": "Understand the Needs of Older Adults in Remote Communication",
+    "overlayTag": "# CHI 2024 # IASDR 2023",
     "summary": "Investigating multimodal techniques to improve remote social connection for older adults.",
     "with": ""
   },
@@ -20,6 +34,8 @@
     "period": "2023.03 – 2024.09",
     "image": "assets/img/P3-0314.png",
     "url": "patbot.html",
+    "shortTitle": "PATBOT",
+    "overlayTag": "# IEEE RO-MAN 24",
     "summary": "A social robot that offers calming interactions for anxious users in waiting rooms.",
     "with": ""
   },
