@@ -1,17 +1,19 @@
 [
   {
     "year": 2026,
-    "title": "MagSnap: Electromagnetically Controlled Bistable Transition Dynamics for Expressive Tactile Feedback",
-    "authors": "Ruyang Yu, Baihui Chen, Tao Luo",
-    "venue": "In Proceedings of CHI EA 2026.",
-    "links": []
-  },
-  {
-    "year": 2026,
     "title": "\"It Seems Every Word They Say Has a Purpose\": A Social-technical Perspective to Understand the Dynamics between University Students and Mental Health Professionals",
     "authors": "Yujie Li*, Baihui Chen*, Yuxuan Xu, Bin Cheng, Gubing Wang and Xueliang Li <strong>(*Co-first)</strong>",
     "venue": "Accepted by CSCW 2026.",
     "links": []
+  },
+  {
+    "year": 2026,
+    "title": "MagSnap: Electromagnetically Controlled Bistable Transition Dynamics for Expressive Tactile Feedback",
+    "authors": "Ruyang Yu, Baihui Chen, Tao Luo",
+    "venue": "In Proceedings of CHI EA 2026.",
+    "links": [
+      {"name": "[DOI]", "url": "https://doi.org/10.1145/3772363.3799080"}
+    ]
   },
   {
     "year": 2025,
