@@ -33,35 +33,34 @@ function renderProjects(projects){
     if (isLink) card.href = url;
     const overlayTag = p.overlayTag && String(p.overlayTag).trim();
     const shortTitle = p.shortTitle && String(p.shortTitle).trim();
-    card.setAttribute('aria-label', [shortTitle || p.title || 'project', overlayTag].filter(Boolean).join(' '));
+    const tagParts = overlayTag
+      ? overlayTag
+          .split(/\s+#\s*/)
+          .map((s) => s.trim().replace(/^\#\s*/, ''))
+          .filter(Boolean)
+      : [];
+    card.setAttribute('aria-label', [shortTitle || p.title || 'project', tagParts.join(' ')].filter(Boolean).join(' '));
 
     const base = (p.image && p.image.trim() ? p.image : placeholderIllustration(idx));
     const src = base.startsWith('data:') ? base : `${base}?v=12`;
     const rawTitle = p.title || '';
-    let prettyTitle;
-    if (overlayTag && shortTitle) {
-      prettyTitle = shortTitle.replace(/(20\d{2})\s+/, '$1<br/>');
-      if(!prettyTitle.includes('<br/>')){
-        prettyTitle = prettyTitle.replace(/\s+(from)\s+/i, '<br/>$1 ');
-      }
-      prettyTitle = prettyTitle + '<br/>' + overlayTag;
-    } else {
-      prettyTitle = rawTitle.replace(/(20\d{2})\s+/, '$1<br/>');
-      if(!prettyTitle.includes('<br/>')){
-        prettyTitle = prettyTitle.replace(/\s+(from)\s+/i, '<br/>$1 ');
-      }
-      if(!prettyTitle.includes('<br/>') && /IEEE RO-MAN 24\s+PATBOT/i.test(rawTitle)){
-        prettyTitle = rawTitle.replace(/\s+PATBOT\s*$/i, '<br/>PATBOT');
-      }
-      if (overlayTag) {
-        prettyTitle = prettyTitle + '<br/>' + overlayTag;
-      }
+    const sourceForLines = overlayTag && shortTitle ? shortTitle : rawTitle;
+    let titleLines = sourceForLines.replace(/(20\d{2})\s+/, '$1<br/>');
+    if (!titleLines.includes('<br/>')) {
+      titleLines = titleLines.replace(/\s+(from)\s+/i, '<br/>$1 ');
     }
-
+    if (!titleLines.includes('<br/>') && /IEEE RO-MAN 24\s+PATBOT/i.test(rawTitle)) {
+      titleLines = rawTitle.replace(/\s+PATBOT\s*$/i, '<br/>PATBOT');
+    }
     card.innerHTML = `
       <img src="${src}" alt="${p.title || ''}">
       <div class="card-overlay">
-        <div class="overlay-title">${prettyTitle}</div>
+        <div class="overlay-inner">
+          <div class="overlay-title">${titleLines}</div>
+          ${tagParts.length
+            ? `<div class="overlay-tags">${tagParts.map((t) => `<span class="overlay-tag">${t}</span>`).join('')}</div>`
+            : ''}
+        </div>
       </div>
     `;
     const imgEl = card.querySelector('img');
@@ -81,7 +80,7 @@ async function fetchProjects(){
   const grid = document.getElementById('projects-grid');
   if(!grid) return;
   try{
-    const res = await fetch('data/projects.json?v=26');
+    const res = await fetch('data/projects.json?v=28');
     const items = await res.json();
     allProjects = Array.isArray(items) ? items : items.projects;
     renderProjects(allProjects);
