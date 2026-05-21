@@ -3,8 +3,10 @@
     "year": 2026,
     "title": "\"It Seems Every Word They Say Has a Purpose\": A Social-technical Perspective to Understand the Dynamics between University Students and Mental Health Professionals",
     "authors": "Yujie Li*, Baihui Chen*, Yuxuan Xu, Bin Cheng, Gubing Wang and Xueliang Li <strong>(*Co-first)</strong>",
-    "venue": "Accepted by CSCW 2026.",
-    "links": []
+    "venue": "In Proceedings of CSCW 2026.",
+    "links": [
+      {"name": "[DOI]", "url": "https://doi.org/10.1145/3788061"}
+    ]
   },
   {
     "year": 2026,

@@ -4,7 +4,7 @@ async function fetchPublications(){
   const highlight = (s) => typeof s === 'string'
     ? s.replace(/Baihui\s+Chen/gi, (m) => `<strong class="me">${m}</strong>`) : s;
   try{
-    const res = await fetch('data/publications.json?v=1');
+    const res = await fetch('data/publications.json?v=2');
     const items = await res.json();
     // Group by year desc
     const byYear = items.reduce((acc, item) => {
