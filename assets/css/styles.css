@@ -36,14 +36,18 @@ body{overflow-x:hidden}
 .centered-main > *{position:relative;z-index:1}
 .hero{padding:48px 0;background:transparent}
 .hero h1{font-size:2.5rem;margin:0 0 16px;color:var(--text);font-weight:700;letter-spacing:-0.02em;line-height:1.12}
-.lede{font-size:1rem;line-height:1.95;color:var(--text);text-align:justify;text-justify:inter-word;hyphens:auto;text-align-last:left;font-weight:400}
-.hero p{font-size:1rem;line-height:1.95;color:var(--text);text-align:justify;text-justify:inter-word;hyphens:auto;text-align-last:left;font-weight:400}
+.lede{font-size:1rem;line-height:1.95;color:var(--text);text-align:justify;text-justify:inter-word;hyphens:auto;text-align-last:left;font-weight:300}
+.lede .emphasis{font-weight:500}
+.lede a.link.emphasis{font-weight:500}
+.hero p{font-size:1rem;line-height:1.95;color:var(--text);text-align:justify;text-justify:inter-word;hyphens:auto;text-align-last:left;font-weight:300}
 .hero-content p{margin:0 0 14px}
 .hero-content p:last-child{margin-bottom:0}
 .pill-links{margin-top:16px;display:flex;align-items:center;flex-wrap:wrap;gap:0}
 .pill-sep{color:var(--text);opacity:.32;font-weight:300;font-size:.875rem;letter-spacing:.06em;user-select:none;padding:0 14px;line-height:1}
 .pill{display:inline-flex;align-items:center;color:var(--text);text-decoration:none;padding:4px 0;font-weight:300;font-size:.875rem;letter-spacing:.06em;transition:color .25s ease,text-shadow .35s ease}
 .pill:hover,.pill:focus-visible{color:var(--text);text-shadow:0 0 6px rgba(120,210,255,.75),0 0 14px rgba(100,190,255,.5),0 0 22px rgba(80,175,255,.35),3px 0 12px rgba(130,220,255,.65),6px 0 20px rgba(110,205,255,.45)}
+.back-link{display:inline-block;margin:.5rem 0;padding:.3rem 0;color:var(--text);text-decoration:none;font-size:.9rem;font-weight:300;letter-spacing:.06em;transition:color .25s ease,text-shadow .35s ease}
+.back-link:hover,.back-link:focus-visible{color:var(--text);text-shadow:0 0 6px rgba(120,210,255,.75),0 0 14px rgba(100,190,255,.5),0 0 22px rgba(80,175,255,.35),3px 0 12px rgba(130,220,255,.65),6px 0 20px rgba(110,205,255,.45)}
 .hero-container{width:min(1100px,92vw);margin-inline:auto}
 .hero-grid{display:grid;grid-template-columns:minmax(260px,340px) 1fr;gap:32px;align-items:stretch}
 .hero-photo{display:flex;justify-content:center;overflow:hidden;border-radius:6px;min-height:0;height:100%}
@@ -52,7 +56,7 @@ body{overflow-x:hidden}
 .hero-content{min-width:0;display:block}
 .about-content{margin-top:1.5rem;min-width:0}
 .about-heading{margin-top:0;margin-bottom:0.35em;margin-left:0;font-size:1rem;color:var(--text);font-weight:700}
-.about-content .list{margin:0.25em 0 0 1.15em;padding:0;line-height:1.95;color:var(--text);font-weight:400;font-size:1rem}
+.about-content .list{margin:0.25em 0 0 1.15em;padding:0;line-height:1.95;color:var(--text);font-weight:300;font-size:1rem}
 .about-content .pill-links{margin-top:14px}
 @media (max-width: 760px){
   .hero-grid{grid-template-columns:1fr;align-items:start}
