@@ -3,8 +3,10 @@
     "year": 2026,
     "title": "ZOMA: Integrating Gen-AI in Hybrid Crafts to Promote Cultural Heritage Transmission",
     "authors": "Baihui Chen*, Yujie Li*, Kezhuo Wang, Wanlin Zhang, Seungwoo Je, Xueliang Li <strong>(*Co-first)</strong>",
-    "venue": "Accepted by International Journal of Human-Computer Studies (SCI)",
-    "links": []
+    "venue": "International Journal of Human-Computer Studies (SCI)",
+    "links": [
+      {"name": "[DOI]", "url": "https://doi.org/10.1016/j.ijhcs.2026.103856"}
+    ]
   },
   {
     "year": 2026,
