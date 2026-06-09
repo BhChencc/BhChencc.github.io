@@ -39,7 +39,7 @@ body{overflow-x:hidden}
 .lede{font-size:1rem;line-height:1.95;color:var(--text);text-align:justify;text-justify:inter-word;hyphens:auto;text-align-last:left;font-weight:300}
 .lede .emphasis{font-weight:500}
 .lede a.link.emphasis{font-weight:500}
-.hero p{font-size:1rem;line-height:1.95;color:var(--text);text-align:justify;text-justify:inter-word;hyphens:auto;text-align-last:left;font-weight:300}
+.hero-content p,.hero-content .lede{font-size:1rem;line-height:1.95;color:var(--text);text-align:justify;text-justify:inter-word;hyphens:auto;text-align-last:left;font-weight:300}
 .hero-content p{margin:0 0 14px}
 .hero-content p:last-child{margin-bottom:0}
 .pill-links{margin-top:16px;display:flex;align-items:center;flex-wrap:wrap;gap:0}
@@ -58,6 +58,26 @@ body{overflow-x:hidden}
 .about-heading{margin-top:0;margin-bottom:0.35em;margin-left:0;font-size:1rem;color:var(--text);font-weight:700}
 .about-content .list{margin:0.25em 0 0 1.15em;padding:0;line-height:1.95;color:var(--text);font-weight:300;font-size:1rem}
 .about-content .pill-links{margin-top:14px}
+
+/* News */
+.news-section{margin-top:2rem;width:100%}
+.news-heading{margin:0 0 .75rem;font-size:1rem;color:var(--text);font-weight:700}
+.news-scroll{--news-row-h:1.9rem;max-height:calc(var(--news-row-h) * 5);overflow-y:auto;padding-right:6px;scrollbar-width:thin;scrollbar-color:rgba(15,37,66,.25) transparent}
+.news-scroll::-webkit-scrollbar{width:5px}
+.news-scroll::-webkit-scrollbar-thumb{background:rgba(15,37,66,.2);border-radius:999px}
+.news-list{display:flex;flex-direction:column;gap:0}
+.news-item{display:flex;align-items:flex-start;gap:24px;min-height:var(--news-row-h);padding:6px 0;box-sizing:border-box}
+.news-item + .news-item{border-top:1px solid var(--border)}
+.news-date,.news-text,.news-location{margin:0;padding:0;font-size:.72rem;line-height:1.45;font-weight:300;color:var(--text)}
+.news-date{flex:0 0 88px;opacity:.85;white-space:nowrap}
+.news-text{flex:1;min-width:0}
+.news-location{flex:0 0 112px;opacity:.85;text-align:right;white-space:nowrap}
+@media (max-width: 760px){
+  .news-scroll{--news-row-h:2.2rem;max-height:calc(var(--news-row-h) * 5)}
+  .news-item{flex-direction:column;gap:3px;min-height:auto;padding:10px 0}
+  .news-location{text-align:left;white-space:normal}
+}
+
 @media (max-width: 760px){
   .hero-grid{grid-template-columns:1fr;align-items:start}
   .hero-photo{justify-content:center;height:auto;min-height:0}
