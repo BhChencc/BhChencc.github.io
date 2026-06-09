@@ -1,8 +1,19 @@
 [
   {
-    "date": "Jan. 2024",
-    "text": "Scalable HCI Symposium poster presentation.",
-    "location": "Shenzhen, China"
+    "date": "May. 2026",
+    "text": "Our CSCW paper has been published online !",
+    "location": "Shenzhen, China",
+    "new": true
+  },
+  {
+    "date": "Apr. 2026",
+    "text": "Attended the CHI 2026 as a co-author.",
+    "location": "Barcelona, Spain"
+  },
+  {
+    "date": "Sep. 2025",
+    "text": "Attended the UIST 2025 for presentation and workshop.",
+    "location": "Busan, Korea"
   },
   {
     "date": "Mar. 2024",
@@ -13,5 +24,10 @@
     "date": "Apr. 2024",
     "text": "At the Greater Bay Area HCI Forum Pre-CHI 2024 paper presentation.",
     "location": "Guangzhou, China"
+  },
+  {
+    "date": "Jan. 2024",
+    "text": "Scalable HCI Symposium poster presentation.",
+    "location": "Shenzhen, China"
   }
 ]
