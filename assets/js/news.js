@@ -2,7 +2,7 @@ async function fetchNews(){
   const container = document.getElementById('news-list');
   if(!container) return;
   try{
-    const res = await fetch('data/news.json?v=11');
+    const res = await fetch('data/news.json?v=14');
     const items = await res.json();
     container.innerHTML = '';
     items.forEach((item) => {
