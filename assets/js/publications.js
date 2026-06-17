@@ -102,7 +102,7 @@ async function fetchPublications(){
   try{
     const [papersRes, patentsRes] = await Promise.all([
       fetch('data/publications.json?v=8'),
-      fetch('data/patents.json?v=2')
+      fetch('data/patents.json?v=3')
     ]);
     const papers = await papersRes.json();
     const patents = await patentsRes.json();
