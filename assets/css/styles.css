@@ -136,11 +136,11 @@ body{overflow-x:hidden}
   .page-publications.page{padding-top:28px}
   .pub-layout{display:block;width:100%}
   .pub-main{width:100%;grid-column:auto;grid-row:auto}
-  .pub-sidebar{position:static;grid-column:auto;grid-row:auto;width:100%;padding:0;margin:0 0 1.35rem;display:flex;justify-content:center;background:transparent;box-shadow:none;border:none;backdrop-filter:none;pointer-events:auto}
-  .pub-nav{display:inline-flex;flex-direction:row;flex-wrap:nowrap;align-items:center;gap:0;padding:4px 6px;background:rgba(255,255,255,.96);backdrop-filter:saturate(140%) blur(12px);border-radius:999px;box-shadow:0 2px 16px rgba(15,37,66,.1);border:1px solid rgba(15,37,66,.08);max-width:100%}
-  .pub-nav-section{padding:9px 12px;font-size:.68rem;letter-spacing:.03em;white-space:nowrap;border-radius:999px}
-  .pub-nav-section + .pub-nav-section{border-left:1px solid rgba(15,37,66,.08)}
-  .pub-section-heading,.pub-year{scroll-margin-top:80px}
+  .pub-sidebar{position:sticky;top:78px;z-index:9;grid-column:auto;grid-row:auto;width:100%;padding:0;margin:0 0 1.25rem;display:flex;justify-content:center;background:transparent;border:none;box-shadow:none;backdrop-filter:none;-webkit-backdrop-filter:none;pointer-events:auto}
+  .pub-nav{display:inline-flex;flex-direction:row;flex-wrap:nowrap;align-items:center;gap:0;padding:5px 7px;background:rgba(255,255,255,.58);backdrop-filter:saturate(180%) blur(20px);-webkit-backdrop-filter:saturate(180%) blur(20px);border-radius:999px;border:1px solid rgba(255,255,255,.75);box-shadow:0 4px 20px rgba(15,37,66,.08),inset 0 1px 0 rgba(255,255,255,.85);max-width:100%}
+  .pub-nav-section{padding:9px 12px;font-size:.68rem;letter-spacing:.03em;white-space:nowrap;border-radius:999px;background:transparent}
+  .pub-nav-section + .pub-nav-section{border-left:1px solid rgba(15,37,66,.1)}
+  .pub-section-heading,.pub-year{scroll-margin-top:calc(78px + 52px)}
 }
 
 /* Projects */
