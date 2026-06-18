@@ -77,9 +77,11 @@ async function fetchPublications(){
       div.className = 'pub-item';
       const title = highlight(p.title);
       const meta = highlight([p.number, p.type].filter(Boolean).join(' · '));
+      const affiliation = p.affiliation ? highlight(p.affiliation) : '';
       div.innerHTML = `
         <div class="pub-title">${title}</div>
         ${meta ? `<div class="pub-meta">${meta}</div>` : ''}
+        ${affiliation ? `<div class="pub-meta">Affiliation: ${affiliation}</div>` : ''}
       `;
       if(Array.isArray(p.links) && p.links.length){
         const links = document.createElement('div');
@@ -102,7 +104,7 @@ async function fetchPublications(){
   try{
     const [papersRes, patentsRes] = await Promise.all([
       fetch('data/publications.json?v=8'),
-      fetch('data/patents.json?v=3')
+      fetch('data/patents.json?v=4')
     ]);
     const papers = await papersRes.json();
     const patents = await patentsRes.json();
